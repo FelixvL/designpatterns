@@ -9,4 +9,15 @@ public class Magazijn {
 	public void attach(Observer observer) {
 		observers.add(observer);
 	}
+	
+	public void notifyAllObservers() {
+		for(Observer observer : observers) {
+			observer.update();
+		}
+	}
+	
+	public void leveren(Leverancier leverancier) {
+		System.out.println("er wordt geleverd");
+		notifyAllObservers();
+	}
 }
