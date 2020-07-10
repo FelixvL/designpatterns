@@ -3,6 +3,13 @@ package designpatterns.examples.observer;
 public class Demo {
 	public static void main(String[] args) {
 		System.out.println("we gaan de observer maken");
+		Magazijn magazijn = new Magazijn();
+		Klant klant = new Klant(magazijn);
+		Winkel winkel = new Winkel(magazijn);
+		
+		
+		
+		
 	}
 }
 

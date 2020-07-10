@@ -9,3 +9,5 @@ public class Winkel extends Observer{
 		System.out.println("update in Winkel");
 	}
 }
+
+
