@@ -1,22 +1,32 @@
 package designpatterns.examples.observer;
 
+import java.util.Scanner;
+
 public class Demo {
+	static Scanner scanner = new Scanner(System.in);
 	public static void main(String[] args) {
 		System.out.println("we gaan de observer maken");
 		Magazijn magazijn = new Magazijn();
-		
-		Klant klant = new Klant(magazijn);
-		Klant klant2 = new Klant(magazijn);
-		Klant klant3 = new Klant(magazijn);
-		Klant klant4 = new Klant(magazijn);
-		Winkel winkel = new Winkel(magazijn);
-		
-		
+
+		boolean doorgaan = true;
+		while(doorgaan) {
+			String keuze = keuzeMenu();
+			if(keuze.equals("q")) {
+				doorgaan = false;
+			}else {
+				new Klant(magazijn);
+			}
+		}
 		
 		Leverancier leverancier = new Leverancier();
-		magazijn.leveren(leverancier);
+		magazijn.krijgtLevering(leverancier);
+		System.out.println("Einde programma");
 		
-		
+	}
+	static String keuzeMenu() {
+		System.out.println("Kies 1 om je aan te melden");
+		String keuze = scanner.nextLine();
+		return keuze;
 	}
 }
 

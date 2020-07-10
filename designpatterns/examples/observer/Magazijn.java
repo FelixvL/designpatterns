@@ -16,7 +16,7 @@ public class Magazijn {
 		}
 	}
 	
-	public void leveren(Leverancier leverancier) {
+	public void krijgtLevering(Leverancier leverancier) {
 		System.out.println("er wordt geleverd");
 		notifyAllObservers();
 	}
