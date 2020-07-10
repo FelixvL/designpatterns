@@ -9,12 +9,14 @@ public class Demo {
 		Magazijn magazijn = new Magazijn();
 
 		boolean doorgaan = true;
+
 		while(doorgaan) {
+			
 			String keuze = keuzeMenu();
 			if(keuze.equals("q")) {
 				doorgaan = false;
 			}else {
-				new Klant(magazijn);
+				new Klant(magazijn, keuze);
 			}
 		}
 		
@@ -24,7 +26,7 @@ public class Demo {
 		
 	}
 	static String keuzeMenu() {
-		System.out.println("Kies 1 om je aan te melden");
+		System.out.println("Type het product in waarvoor je je wilt inschrijven");
 		String keuze = scanner.nextLine();
 		return keuze;
 	}
