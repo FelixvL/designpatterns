@@ -5,7 +5,7 @@ public class Winkel extends Observer{
 		this.magazijn = magazijn;
 		this.magazijn.attach(this);
 	}
-	public void update() {
+	public void update(String product) {
 		System.out.println("update in Winkel");
 	}
 }

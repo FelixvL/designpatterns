@@ -7,7 +7,11 @@ public class Klant extends Observer{
 		this.productkeuze = productkeuze;
 		this.magazijn.attach(this);
 	}
-	public void update() {
-		System.out.println("update in Klant, voor het product: "+productkeuze);
+	public void update(String product) {
+		if(product.equals(productkeuze)) {
+			System.out.println("Yes "+product+" is binnen, ik moet naar de winkel");
+		}else {
+			System.out.println("Dit is niet relevant, want ik had besteld "+ productkeuze);
+		}
 	}
 }

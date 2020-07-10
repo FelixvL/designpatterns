@@ -7,7 +7,11 @@ public class Demo {
 	public static void main(String[] args) {
 		System.out.println("we gaan de observer maken");
 		Magazijn magazijn = new Magazijn();
-
+		magazijn.voorraad.add("Melk");
+		magazijn.voorraad.add("Water");
+		magazijn.voorraad.add("Brood");
+		
+		
 		boolean doorgaan = true;
 
 		while(doorgaan) {
@@ -20,7 +24,7 @@ public class Demo {
 			}
 		}
 		
-		Leverancier leverancier = new Leverancier();
+		Leverancier leverancier = new Leverancier("Soep");
 		magazijn.krijgtLevering(leverancier);
 		System.out.println("Einde programma");
 		
